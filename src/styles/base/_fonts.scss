@@ -1,0 +1,62 @@
+@font-face {
+	font-family: 'Bebas Neue Pro';
+	src:
+		url('../assets/fonts/BebasNeuePro-Light.woff') format('woff'),
+		url('../assets/fonts/BebasNeuePro-Light.ttf') format('truetype'),
+		url('../assets/fonts/BebasNeuePro-Light.eot') format('embedded-opentype'),
+		url('../assets/fonts/BebasNeuePro-Light.woff2') format('woff2');
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Bebas Neue Pro';
+	src:
+		url('../assets/fonts/BebasNeuePro-Book.woff') format('woff'),
+		url('../assets/fonts/BebasNeuePro-Book.ttf') format('truetype'),
+		url('../assets/fonts/BebasNeuePro-Book.eot') format('embedded-opentype'),
+		url('../assets/fonts/BebasNeuePro-Book.woff2') format('woff2');
+	font-weight: 325;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Bebas Neue Pro';
+	src:
+		url('../assets/fonts/BebasNeuePro-Middle.woff') format('woff'),
+		url('../assets/fonts/BebasNeuePro-Middle.ttf') format('truetype'),
+		url('../assets/fonts/BebasNeuePro-Middle.eot') format('embedded-opentype'),
+		url('../assets/fonts/BebasNeuePro-Middle.woff2') format('woff2');
+	font-weight: 325;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Bebas Neue Pro';
+	src:
+		url('../assets/fonts/BebasNeuePro-Regular.woff') format('woff'),
+		url('../assets/fonts/BebasNeuePro-Regular.ttf') format('truetype'),
+		url('../assets/fonts/BebasNeuePro-Regular.eot') format('embedded-opentype'),
+		url('../assets/fonts/BebasNeuePro-Regular.woff2') format('woff2');
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Bebas Neue Pro';
+	src:
+		url('../assets/fonts/BebasNeuePro-Bold.woff') format('woff'),
+		url('../assets/fonts/BebasNeuePro-Bold.ttf') format('truetype'),
+		url('../assets/fonts/BebasNeuePro-Bold.eot') format('embedded-opentype'),
+		url('../assets/fonts/BebasNeuePro-Bold.woff2') format('woff2');
+	font-weight: 700;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'FuturaLightC';
+	src: url('../assets/fonts/Futuralightc.otf') format('opentype');
+
+	font-weight: 300;
+	font-style: normal;
+}

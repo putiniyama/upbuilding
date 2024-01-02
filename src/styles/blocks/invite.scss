@@ -1,0 +1,283 @@
+.invite {
+	background: #b5bbcb;
+
+	.container {
+		background: #665e6d;
+	}
+
+	&__wrapper {
+		padding-top: 92px;
+		padding-right: 83px;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__image {
+		border-radius: 0px 300px 300px 0px;
+		width: 927px;
+		height: 571px;
+		border-radius: 0px 300px 300px 0px;
+		background:
+			url('/images/surprise.jpeg'),
+			lightgray 0px -129.847px / 100% 243.554% no-repeat;
+		background-position: 0px -150px;
+		background-size: cover;
+		box-shadow: -5px -7px 32px 0px rgba(54, 44, 57, 0.3);
+	}
+
+	&__title {
+		position: absolute;
+		left: 85px;
+		bottom: 100px;
+		color: #120e14;
+		font-size: 56px;
+		font-style: normal;
+		font-weight: 700;
+		line-height: 110%; /* 61.6px */
+		text-transform: uppercase;
+	}
+
+	&__text {
+		position: absolute;
+		color: #120e14;
+		font-size: 32px;
+		font-style: normal;
+		font-weight: 350;
+		line-height: normal;
+		left: 85px;
+		bottom: 55px;
+	}
+
+	&__description {
+		width: 316px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+
+		&-title {
+			margin-top: 21px;
+			order: 2;
+			color: $text-color-white;
+			font-size: 32px;
+			font-style: normal;
+			font-weight: 350;
+			line-height: normal;
+		}
+
+		&-text {
+			order: 3;
+			margin-top: 23px;
+			color: $text-color-white;
+			font-size: 18px;
+			font-style: normal;
+			font-weight: 325;
+			line-height: 110%; /* 19.8px */
+		}
+	}
+	&__surprise {
+		order: 1;
+		// margin-top: 64px;
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+	}
+}
+
+@media (max-width: 1386px) {
+	.invite {
+		&__wrapper {
+			padding-top: 40px;
+			padding-right: 48px;
+		}
+
+		&__image {
+			width: 560px;
+			height: 351px;
+		}
+
+		&__text {
+			bottom: 13px;
+			left: 25px;
+		}
+
+		&__title {
+			bottom: 54px;
+			left: 25px;
+		}
+
+		.button {
+			display: none;
+		}
+
+		&__description {
+			width: 271px;
+		}
+
+		&__surprise {
+			margin-top: 0;
+			display: flex;
+			justify-content: flex-end;
+			order: 3;
+		}
+
+		&__image {
+			background-position: 0px -80px;
+			background-size: cover;
+			box-shadow: -5px -7px 32px 0px rgba(54, 44, 57, 0.3);
+		}
+	}
+}
+@media (max-width: 919px) {
+	.invite {
+		padding-top: 24px;
+
+		.container {
+			border-radius: 64px;
+			overflow: hidden;
+		}
+		&__wrapper {
+			padding: 48px 101px 48px 0;
+			height: auto;
+			flex-direction: column;
+		}
+
+		&__image {
+			height: 367px;
+			width: 585px;
+		}
+
+		&__title {
+			bottom: auto;
+			top: 297px;
+			left: 40px;
+		}
+
+		&__text {
+			top: 367px;
+			left: 40px;
+			bottom: auto;
+		}
+
+		&__description {
+			margin-top: 40px;
+			margin-left: 40px;
+			width: 481px;
+		}
+
+		&__surprise {
+			position: absolute;
+			right: 101px;
+		}
+	}
+}
+@media (max-width: 748px) {
+	.invite {
+		&__image {
+			height: 266px;
+			width: 424px;
+		}
+
+		&__title {
+			top: 237px;
+			font-size: 24px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: normal;
+			text-transform: none;
+		}
+
+		&__text {
+			top: 269px;
+			font-size: 16px;
+			font-style: normal;
+			font-weight: 325;
+			line-height: 110%; /* 17.6px */
+		}
+
+		&__surprise {
+			svg {
+				position: absolute;
+				top: -346px;
+				left: -300px;
+				width: 36px;
+				height: 36px;
+
+				g {
+					path {
+						fill: #665e6d;
+					}
+				}
+			}
+		}
+
+		&__description {
+			width: 100%;
+
+			&-title {
+				font-size: 24px;
+				font-style: normal;
+				font-weight: 400;
+				line-height: normal;
+			}
+
+			&-text {
+				font-size: 16px;
+				font-style: normal;
+				font-weight: 325;
+				line-height: 110%; /* 17.6px */
+			}
+		}
+	}
+}
+@media (max-width: 460px) {
+	.invite {
+		padding: 24px 10px 0 10px;
+
+		&__wrapper {
+			padding: 40px 19px 40px 0;
+		}
+
+		.container {
+			padding: 0;
+		}
+
+		&__image {
+			width: 301px;
+			height: 189px;
+			background-position: 0px -50px;
+		}
+
+		&__title {
+			top: 164px;
+			left: 20px;
+		}
+
+		&__text {
+			top: 195px;
+			left: 20px;
+		}
+
+		&__description {
+			margin-top: 24px;
+			margin-left: 20px;
+			padding-right: 20px;
+		}
+
+		&__surprise {
+			right: inherit;
+			left: 20px;
+			top: 60px;
+			svg {
+				top: 0;
+				bottom: 0;
+				right: 0;
+				left: 0;
+				width: 40px;
+				height: 40px;
+				position: absolute;
+				width: 24px;
+				height: 24px;
+			}
+		}
+	}
+}

@@ -1,0 +1,211 @@
+.technology {
+	background: #b5bbcb;
+
+	&__wrapper {
+		padding: 104px 85px 104px 85px;
+		border-radius: 88px 88px 0 0;
+		background: #665e6d;
+		display: flex;
+		justify-content: flex-start;
+		gap: 60px;
+	}
+
+	&__items {
+		display: grid;
+		grid-template-columns: 280px 200px;
+		grid-template-rows: 244px 244px;
+		border-radius: 300px 0px 0px 300px;
+		box-shadow: -5px -7px 32px 0px rgba(54, 44, 57, 0.3);
+		overflow: hidden;
+	}
+
+	&__photo {
+		width: 100%;
+		img {
+			object-fit: cover;
+			height: 100%;
+			width: 100%;
+		}
+
+		&:nth-child(2) {
+			grid-column: 2/3;
+			grid-row: 1/3;
+			img {
+				object-position: -10px;
+			}
+		}
+	}
+
+	&__description {
+		max-width: 552px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+
+	&__text {
+		display: flex;
+		flex-direction: column;
+		gap: 16px;
+
+		p {
+			color: $text-color-white;
+			font-family: Bebas Neue Pro;
+			font-size: 18px;
+			font-style: normal;
+			font-weight: 325;
+			line-height: 110%; /* 19.8px */
+		}
+	}
+
+	&__classes {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 8px;
+	}
+
+	&__class {
+		border-radius: 96px;
+		border: 1px solid $text-color-white;
+		display: flex;
+		padding: 8px 22px;
+		gap: 24px;
+
+		align-items: center;
+		white-space: nowrap; /* Use white-space instead of text-wrap */
+		color: $text-color-white;
+
+		/* Основа для плашек */
+		font-family: Bebas Neue Pro;
+		font-size: 16px;
+		font-style: normal;
+		font-weight: 350;
+		line-height: normal;
+	}
+}
+
+.container {
+	max-width: 1366px;
+}
+
+@media (max-width: 1386px) {
+	.technology {
+		&__wrapper {
+			flex-direction: column;
+			padding: 48px;
+			height: 813px;
+		}
+
+		&__description {
+			order: 1;
+			max-width: 100%;
+
+			.button {
+				margin-top: 32px;
+			}
+		}
+
+		&__items {
+			order: 2;
+			position: absolute;
+			grid-template-columns: 283px 275px;
+			grid-template-rows: 150px 150px;
+			border-radius: 260px 0px 0px 260px;
+			box-shadow: -5px -7px 32px 0px rgba(54, 44, 57, 0.3);
+			right: 48px;
+			bottom: 48px;
+		}
+
+		&__text {
+			margin-top: 40px;
+		}
+
+		&__classes {
+			max-width: 600px;
+			margin-top: 32px;
+		}
+
+		&__class {
+			width: fit-content;
+		}
+
+		&__photo {
+			&:nth-child(2) {
+				img {
+					object-position: -0px;
+				}
+			}
+		}
+	}
+}
+@media (max-width: 919px) {
+	.technology {
+		padding-top: 24px;
+
+		&__wrapper {
+			height: 767px;
+			padding: 48px 40px;
+			border-radius: 64px;
+		}
+
+		&__items {
+			grid-template-columns: 222px 216px;
+			grid-template-rows: 113px 113px;
+			bottom: 64px;
+			right: 40px;
+		}
+	}
+}
+@media (max-width: 748px) {
+	.technology {
+		&__wrapper {
+			padding: 48px 20px;
+			height: auto;
+			gap: 32px;
+		}
+
+		&__text {
+			margin-top: 32px;
+
+			p {
+				color: #ece5e4;
+				font-size: 16px;
+				font-style: normal;
+				font-weight: 325;
+				line-height: 110%; /* 17.6px */
+			}
+		}
+
+		&__items {
+			bottom: 136px;
+			grid-template-columns: 222px 196px;
+			right: 0;
+		}
+
+		&__description {
+			.button {
+				margin: 303px auto 0 auto;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 460px) {
+	.technology {
+		&__wrapper {
+			padding: 32px 20px;
+		}
+
+		&__items {
+			grid-template-columns: 152px 147px;
+			right: 10px;
+			bottom: 120px;
+		}
+
+		&__description {
+			.button {
+				margin: 286px auto 0 auto;
+			}
+		}
+	}
+}

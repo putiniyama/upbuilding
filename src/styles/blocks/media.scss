@@ -1,0 +1,27 @@
+.container {
+	max-width: 1366px;
+}
+
+@media (max-width: 1386px) {
+	.container {
+		// max-width: 960px;
+		max-width: 899px;
+	}
+}
+@media (max-width: 919px) {
+	.container {
+		max-width: 728px;
+	}
+}
+@media (max-width: 748px) {
+	.container {
+		max-width: 440px;
+	}
+}
+
+@media screen and (max-width: 460px) {
+	.container {
+		width: 100%;
+		padding: 0 10px;
+	}
+}

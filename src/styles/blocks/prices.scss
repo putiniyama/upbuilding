@@ -1,0 +1,286 @@
+.prices {
+	background: #b5bbcb;
+
+	.container {
+		background: #665e6d;
+		padding: 104px 85px 0 85px;
+	}
+
+	&__wrapper {
+		margin-top: 24px;
+		display: grid;
+		justify-content: start;
+		grid-template-columns: 524px 524px;
+		gap: 88px;
+	}
+
+	&__text {
+		color: $text-color-white;
+		margin-top: 16px;
+		font-family: Bebas Neue Pro;
+		font-size: 18px;
+		font-style: normal;
+		font-weight: 325;
+		line-height: normal;
+	}
+
+	ul {
+		margin-top: 24px;
+		list-style-type: none;
+
+		li {
+			height: 46px;
+			display: grid;
+		}
+	}
+
+	&__block {
+		ul {
+			display: flex;
+			flex-direction: column;
+			gap: 16px;
+			li {
+				grid-template-columns: 107px 1fr auto;
+				align-items: end;
+				justify-content: space-between;
+				gap: 35px;
+			}
+		}
+	}
+
+	&__right {
+		ul {
+			display: flex;
+			flex-direction: column;
+			gap: 16px;
+			li {
+				grid-template-columns: 45px 1fr auto;
+				align-items: end;
+				justify-content: space-between;
+				gap: 35px;
+			}
+		}
+	}
+
+	&__name {
+		height: 46px;
+		color: $text-color-white;
+		font-family: Bebas Neue Pro;
+		font-size: 24px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 180%;
+		height: 100%;
+	}
+
+	&__line {
+		background: rgba(236, 229, 228, 0.7);
+		height: 1px;
+		display: flex;
+		margin-bottom: 10px;
+	}
+
+	&__price {
+		display: flex;
+		padding: 8px 16px;
+		flex-direction: column;
+		// align-items: flex-start;
+		// gap: 24px;
+		// align-self: stretch;
+		width: fit-content;
+		border-radius: 96px;
+		border: 1px solid $text-color-white;
+		background: $text-color-white;
+		color: #665e6d;
+		font-size: 24px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: normal;
+		height: 46px;
+	}
+
+	&__bottom-text {
+		margin-top: 16px;
+		color: $text-color-white;
+		font-size: 18px;
+		font-style: normal;
+		font-weight: 325;
+		line-height: normal;
+		width: fit-content;
+		margin-left: auto;
+	}
+
+	&__title {
+		margin-top: 37px;
+		color: $text-color-white;
+		font-size: 24px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: normal;
+
+		&-two {
+			margin-top: 16px;
+		}
+	}
+
+	&__list {
+		margin-top: 16px !important;
+	}
+
+	&__questions {
+		margin: 48px auto 0 auto;
+		width: fit-content;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	&__socials {
+		margin-top: 40px;
+		display: flex;
+		width: 554px;
+		justify-content: space-between;
+		padding-bottom: 14px;
+	}
+
+	&__left-text {
+		margin-top: 16px;
+		color: $text-color-white;
+		font-size: 18px;
+		font-style: normal;
+		font-weight: 325;
+		line-height: normal;
+	}
+
+	&__social {
+		display: flex;
+		gap: 16px;
+		align-items: flex-end;
+	}
+}
+
+@media (max-width: 1386px) {
+	.prices {
+		.container {
+			padding: 40px 48px 48px 48px;
+		}
+
+		&__wrapper {
+			grid-template-columns: 392px 392px;
+			gap: 0;
+			justify-content: space-between;
+		}
+
+		&__right {
+			ul {
+				li {
+					align-items: center;
+					gap: 24px;
+				}
+			}
+		}
+
+		&__line {
+			margin: 0;
+		}
+
+		&__block {
+			ul {
+				margin-top: 69px;
+				li {
+					align-items: center;
+					gap: 24px;
+					grid-template-columns: auto 1fr auto;
+				}
+			}
+		}
+
+		&__questions {
+			margin: 40px auto 0 auto;
+		}
+	}
+}
+@media (max-width: 919px) {
+	.prices {
+		.container {
+			padding: 88px 40px 48px 40px;
+			border-radius: 0 0 64px 64px;
+		}
+
+		&__wrapper {
+			grid-template-columns: 306px 312px;
+		}
+
+		&__block {
+			ul {
+				margin-top: 95px;
+			}
+		}
+	}
+}
+@media (max-width: 748px) {
+	.prices {
+		.subtitle {
+			font-size: 32px;
+			font-style: normal;
+			font-weight: 350;
+			line-height: normal;
+		}
+		.container {
+			padding: 56px 20px 48px 20px;
+		}
+
+		&__wrapper {
+			display: flex;
+			flex-direction: column;
+		}
+		&__title {
+			font-size: 24px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: normal;
+		}
+
+		&__block {
+			margin-top: 32px;
+			ul {
+				margin-top: 24px;
+			}
+		}
+
+		&__socials {
+			width: 100%;
+			flex-direction: column;
+			gap: 24px;
+		}
+	}
+}
+@media (max-width: 460px) {
+	.prices {
+		.container {
+			margin: 0 10px 0 10px;
+			width: calc(100% - 20px);
+			// margin-right: 10px;
+			padding: 48px 20px 40px 20px;
+		}
+
+		&__wrapper {
+			margin-top: 32px;
+		}
+
+		.subtitle {
+			font-size: 24px;
+			font-weight: 400;
+		}
+
+		&__title {
+			font-size: 18px;
+		}
+
+		&__left {
+			.subtitle {
+				font-size: 32px;
+			}
+		}
+	}
+}

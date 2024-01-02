@@ -1,0 +1,642 @@
+// @import 'libs/normalize';
+
+@import 'base/variables';
+@import 'base/mixins';
+@import 'base/fonts';
+@import 'blocks/header';
+@import 'blocks/promo';
+@import 'blocks/socials';
+@import 'blocks/technology';
+@import 'blocks/about';
+@import 'blocks/swiper';
+@import 'blocks/prices';
+@import 'blocks/why-me';
+@import 'blocks/invite';
+@import 'blocks/request';
+
+@import 'blocks/footer';
+
+* {
+	font-family: 'Bebas Neue Pro', sans-serif;
+	color: $text-color;
+	font-weight: 325;
+	line-height: 110%;
+	font-size: $fz18;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:active,
+:hover,
+:focus {
+	outline: 0;
+	outline-offset: 0;
+}
+
+.container {
+	position: relative;
+	max-width: 1366px;
+	margin: 0 auto;
+}
+
+a {
+	text-decoration: none;
+}
+
+h1 {
+	margin: 0;
+	padding: 0;
+}
+
+h2 {
+}
+
+h3 {
+}
+
+body,
+html {
+	display: unset;
+	scrollbar-gutter: stable;
+	margin: 0;
+	padding: 0;
+	scroll-behavior: smooth;
+	position: relative;
+}
+
+img {
+	margin: 0;
+	padding: 0;
+}
+
+.button {
+	display: flex;
+	width: fit-content;
+	height: 56px;
+	padding: 10px 30px;
+	justify-content: space-between;
+	gap: 25px;
+	align-items: center;
+	color: #c5c2cc;
+	font-family: Bebas Neue Pro;
+	font-size: 18px;
+	font-style: normal;
+	font-weight: 350;
+	line-height: normal;
+	border-radius: 100px;
+	background: $text-color;
+	box-shadow:
+		-4px -4px 4px 0px rgba(65, 64, 70, 0.8) inset,
+		2px 2px 15px 0px rgba(55, 44, 67, 0.2),
+		4px 4px 4px 0px rgba(14, 12, 16, 0.8) inset;
+	transition: all 0.4s ease;
+	cursor: pointer;
+
+	&__black {
+		&:hover {
+			background: $text-color;
+			box-shadow:
+				-4px -4px 8px 0px rgba(204, 197, 204, 0.3) inset,
+				2px 2px 10px 0px rgba(24, 13, 33, 0.4),
+				4px 4px 4px 0px rgba(0, 0, 0, 0.8) inset;
+
+			svg {
+				g {
+					path {
+						fill: #c5c2cc;
+					}
+				}
+			}
+		}
+
+		&:active {
+			box-shadow:
+				-4px -4px 10px 0px #000 inset,
+				4px 4px 10px 0px rgba(0, 0, 0, 0.1) inset,
+				2px 2px 10px 0px rgba(24, 22, 26, 0.5);
+		}
+	}
+
+	&__pink {
+		background: $pink-color;
+		box-shadow:
+			-4px -4px 6px 0px rgba(246, 228, 226, 0.5) inset,
+			4px 4px 6px 0px rgba(174, 151, 148, 0.5) inset,
+			2px 2px 15px 0px rgba(0, 0, 0, 0.2);
+		color: $text-color;
+		svg {
+			g {
+				path {
+					stroke: $text-color;
+				}
+			}
+		}
+
+		&:hover {
+			box-shadow:
+				4px 4px 6px 0px rgba(246, 228, 226, 0.5) inset,
+				-4px -4px 6px 0px rgba(246, 228, 226, 0.5) inset,
+				2px 2px 15px 0px rgba(231, 208, 205, 0.4);
+			svg {
+				g {
+					path {
+						fill: $text-color;
+					}
+				}
+			}
+		}
+
+		&:active {
+			box-shadow:
+				4px 4px 6px 0px rgba(246, 228, 226, 0.5) inset,
+				-4px -4px 6px 0px rgba(246, 228, 226, 0.5) inset,
+				2px 2px 15px 0px rgba(231, 208, 205, 0.6);
+		}
+	}
+}
+
+.title {
+	color: $text-color;
+	font-family: Bebas Neue Pro;
+	font-size: 56px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 110%; /* 61.6px */
+	text-transform: uppercase;
+	width: fit-content;
+
+	&__block {
+		color: $text-color-white;
+		font-family: Bebas Neue Pro;
+		font-size: 40px;
+		font-style: normal;
+		font-weight: 350;
+		line-height: normal;
+		text-transform: uppercase;
+	}
+
+	&__black {
+		color: $text-color;
+		font-family: Bebas Neue Pro;
+		font-size: 40px;
+		font-style: normal;
+		font-weight: 350;
+		line-height: normal;
+		text-transform: uppercase;
+	}
+}
+
+.subtitle {
+	color: $text-color;
+	font-family: Bebas Neue Pro;
+	font-size: 32px;
+	font-style: normal;
+	font-weight: 350;
+	line-height: normal;
+
+	&_white {
+		color: $text-color-white;
+	}
+}
+
+.text {
+	color: $pink-color;
+	font-family: Bebas Neue Pro;
+	font-size: 18px;
+	font-style: normal;
+	font-weight: 325;
+	line-height: 110%; /* 19.8px */
+}
+
+.overlay {
+	background: rgba(154, 150, 152, 0.8);
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 100;
+	display: none;
+
+	&.active {
+		display: block;
+	}
+}
+
+.success-message {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	padding: 64px 56px;
+	border-radius: 64px;
+	background: #665e6d;
+	z-index: 150;
+	width: fit-content;
+	overflow: hidden;
+	display: none;
+
+	&__image {
+		right: 0;
+		bottom: 0;
+		overflow: hidden;
+		position: absolute;
+		height: 481px;
+
+		img {
+			object-fit: cover;
+			object-position: 100px 50px;
+
+			svg {
+				path {
+					opacity: 0.1;
+				}
+			}
+		}
+	}
+
+	&__close {
+		position: absolute;
+		top: 54px;
+		right: 54px;
+		cursor: pointer;
+	}
+
+	&__title {
+		color: #ece5e4;
+		font-family: Bebas Neue Pro;
+		font-size: 40px;
+		font-style: normal;
+		font-weight: 350;
+		line-height: normal;
+		text-transform: uppercase;
+	}
+
+	p {
+		color: #ece5e4;
+		font-family: Bebas Neue Pro;
+		font-size: 32px;
+		font-style: normal;
+		font-weight: 350;
+		line-height: normal;
+	}
+
+	&__socials {
+		display: flex;
+		align-items: center;
+		gap: 60px;
+	}
+
+	&__soc {
+		display: flex;
+		gap: 16px;
+	}
+
+	&__text {
+		color: #ece5e4;
+		font-family: Bebas Neue Pro;
+		font-size: 18px;
+		font-style: normal;
+		font-weight: 325;
+		line-height: normal;
+	}
+}
+
+.overlay {
+	.active {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		left: 0;
+		background: #000;
+		z-index: 100;
+	}
+}
+
+.success-message.show {
+	flex-direction: column;
+	display: flex;
+	gap: 56px;
+}
+
+.form__two {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	padding: 64px 56px;
+	border-radius: 64px;
+	background: #665e6d;
+	z-index: 155;
+	width: 836px;
+	overflow: hidden;
+	display: none;
+
+	&.active {
+		display: flex;
+	}
+
+	&-close {
+		position: absolute;
+		right: 30px;
+		top: 30px;
+		cursor: pointer;
+	}
+
+	.request {
+		&__photo {
+			right: -190px;
+			bottom: -190px;
+		}
+	}
+
+	&-wrapper {
+		display: flex;
+		flex-direction: column;
+
+		#form {
+			margin-top: 40px;
+			width: 724px;
+			display: grid;
+			grid-template-columns: 350px 350px;
+			gap: 24px;
+			align-items: flex-end;
+		}
+
+		input {
+			border-radius: 32px;
+			border: 1px solid $text-color-white;
+			color: rgba(236, 229, 228, 0.7);
+			font-size: 18px;
+			font-style: normal;
+			font-weight: 325;
+			line-height: normal;
+			padding: 24px 24px;
+			background-color: #665e6d;
+			z-index: 5;
+			&::placeholder {
+				color: rgba(236, 229, 228, 0.3);
+				font-size: 18px;
+				font-style: normal;
+				font-weight: 325;
+				line-height: normal;
+			}
+
+			&.invalid {
+				border-radius: 32px;
+				border: 1px solid #f4816e;
+				&::placeholder {
+					color: #f4816e;
+				}
+			}
+		}
+
+		#charCount {
+			position: absolute;
+			bottom: 130px;
+			color: $text-color-white;
+		}
+
+		textarea {
+			background-color: #665e6d;
+			border-radius: 40px;
+			border: 1px solid #ece5e4;
+			padding: 24px;
+			overflow: hidden; /* Уберите полосу прокрутки */
+			resize: none;
+			width: 100%;
+			height: 195px;
+			position: relative;
+			color: rgba(236, 229, 228, 0.7);
+			font-family: Bebas Neue Pro;
+			font-size: 18px;
+			font-style: normal;
+			font-weight: 325;
+			line-height: normal;
+			z-index: 5;
+
+			&::placeholder {
+				color: rgba(236, 229, 228, 0.3);
+				font-size: 18px;
+				font-style: normal;
+				font-weight: 325;
+				line-height: normal;
+			}
+		}
+
+		.button {
+			border: none;
+			cursor: pointer;
+			z-index: 5;
+		}
+
+		p {
+			margin-top: 48px;
+			color: #ece5e4;
+			font-family: FuturaLightC;
+			font-size: 12px;
+			font-style: normal;
+			font-weight: 300;
+			line-height: normal;
+			z-index: 5;
+
+			a {
+				margin-top: 48px;
+				color: #ece5e4;
+				font-family: FuturaLightC;
+				font-size: 12px;
+				font-style: normal;
+				font-weight: 300;
+				line-height: normal;
+				text-decoration-line: underline;
+			}
+		}
+	}
+}
+
+@media (max-width: 1386px) {
+	.success-message {
+		width: 609px;
+
+		&__socials {
+			gap: 0;
+			justify-content: space-between;
+		}
+	}
+}
+@media (max-width: 919px) {
+	.success-message {
+		&__title {
+			font-family: Bebas Neue Pro;
+			font-size: 32px;
+			font-style: normal;
+			font-weight: 350;
+			line-height: normal;
+			text-transform: none;
+		}
+
+		p {
+			font-family: Bebas Neue Pro;
+			font-size: 32px;
+			font-style: normal;
+			font-weight: 350;
+			line-height: normal;
+		}
+		&.show {
+			gap: 40px;
+		}
+
+		&__close {
+			right: 30px;
+			top: 30px;
+		}
+	}
+	.title {
+		color: #e9d1cd;
+	}
+
+	.subtitle {
+		color: #ece5e4;
+	}
+
+	.menu-burger {
+		z-index: 101;
+		.active {
+			display: flex;
+			left: 0;
+			z-index: 101;
+		}
+	}
+
+	.form__two {
+		max-width: 649px;
+		.title {
+			color: #ece5e4;
+		}
+
+		#form {
+			width: auto;
+			grid-template-columns: 1fr 1fr;
+			gap: 20px;
+		}
+
+		.button {
+			z-index: 55;
+		}
+	}
+}
+@media (max-width: 748px) {
+	.success-message {
+		width: 440px;
+		align-items: flex-start;
+		padding: 56px;
+
+		p {
+			font-size: 18px;
+		}
+
+		&__socials {
+			gap: 16px;
+			flex-direction: column;
+		}
+
+		&.show {
+			gap: 32px;
+		}
+	}
+	.title {
+		font-size: 40px;
+
+		&__block {
+			color: #ece5e4;
+		}
+	}
+
+	.subtitle {
+		font-family: Bebas Neue Pro;
+		font-size: 24px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: normal;
+	}
+
+	.menu-burger {
+		.active {
+			left: 10px;
+			right: 10px;
+		}
+	}
+
+	.form__two {
+		max-width: calc(100% - 20px);
+		padding: 48px 20px;
+
+		.title {
+			font-size: 32px;
+			text-transform: none;
+		}
+
+		#form {
+			display: flex;
+			flex-direction: column;
+
+			input {
+				width: 100%;
+			}
+
+			.button {
+				margin: 0 auto;
+			}
+		}
+
+		&-wrapper {
+			p {
+				margin-top: 20px;
+			}
+		}
+	}
+}
+@media (max-width: 460px) {
+	.success-message {
+		width: calc(100% - 20px);
+
+		padding: 64px 40px 40px 40px;
+
+		&.show {
+			gap: 24px;
+		}
+
+		&__title {
+			font-size: 18px;
+		}
+	}
+	.form__two {
+		.title {
+			font-family: Bebas Neue Pro;
+			font-size: 24px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: normal;
+		}
+	}
+	.title {
+		font-family: Bebas Neue Pro;
+		font-size: 32px;
+		font-style: normal;
+		font-weight: 350;
+		line-height: 90%; /* 28.8px */
+		text-transform: none;
+	}
+
+	.social-phone,
+	.social-whatsapp,
+	.social-tg,
+	.social-inst {
+		width: 56px;
+		height: 56px;
+	}
+}
+
+@import 'blocks/media';
